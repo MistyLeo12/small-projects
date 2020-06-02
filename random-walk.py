@@ -19,7 +19,7 @@ def randomWalk(steps, num_walks):
     y = np.zeros(steps)
 
     for i in range(1, steps):
-        random_val = random.randint(0, 7)
+        random_val = random.randint(0, 7) #8 degrees of freedom in 2d graph
         if random_val is 0:
             x[i] = x[i-1] + 1 
             y[i] = y[i-1]
@@ -61,7 +61,7 @@ def visualize(steps, num_walks):
     plt.title("2D Random Walk")
     plt.show()
 
-visualize(1000, 5)
+visualize(10, 5)
 
 
 

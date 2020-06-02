@@ -19,21 +19,27 @@ def randomWalk(steps, num_walks):
     y = np.zeros(steps)
 
     for i in range(1, steps):
-        random_val = random.randint(1, 6)
-        if random_val is 1:
+        random_val = random.randint(0, 7)
+        if random_val is 0:
             x[i] = x[i-1] + 1 
             y[i] = y[i-1]
-        elif random_val is 2:
+        elif random_val is 1:
             x[i] = x[i-1] - 1
             y[i] = y[i-1]
-        elif random_val is 3:
+        elif random_val is 2:
             x[i] = x[i-1]
             y[i] = y[i-1] + 1
-        elif random_val is 4:
+        elif random_val is 3:
             x[i] = x[i-1]
             y[i] = y[i-1] - 1
+        elif random_val is 4:
+            x[i] = x[i-1] + 1
+            y[i] = y[i-1] + 1
         elif random_val is 5:
             x[i] = x[i-1] + 1
+            y[i] = y[i-1] - 1
+        elif random_val is 6:
+            x[i] = x[i-1] - 1
             y[i] = y[i-1] + 1
         else:
             x[i] = x[i-1] - 1
@@ -55,7 +61,7 @@ def visualize(steps, num_walks):
     plt.title("2D Random Walk")
     plt.show()
 
-visualize(100, 5)
+visualize(1000, 5)
 
 
 

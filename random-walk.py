@@ -61,7 +61,7 @@ def visualize(steps, num_walks):
     plt.title("2D Random Walk")
     plt.show()
 
-visualize(10, 5)
+visualize(100, 1)
 
 
 

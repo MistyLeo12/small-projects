@@ -1,7 +1,7 @@
 """
 Web Scraper for getting drinks dat to add to my random drink recepie project
 """
-import requests 
+import requests
 
 def scraper(url):
     res = requests.get(url)
